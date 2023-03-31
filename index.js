@@ -1,8 +1,20 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  for (let startIndex = 0; startIndex < word.length / 2; startIndex++) {
+    //confirm each letter is corresponding both from front and behind
+    const endIndex = word.length - 1 - startIndex;
+    const startletter = word[startIndex];
+    const endletter = word[endIndex];
+    //if letters dont match return false
+    if (word[startIndex] !== word[endIndex]) {
+      return false;
+    }
+  }
+ //if letters  match return true
+  return true;
 }
 
-/* 
+/*
   Add your pseudocode here
 */
 
